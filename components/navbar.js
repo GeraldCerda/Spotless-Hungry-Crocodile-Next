@@ -1,11 +1,14 @@
 import React from 'react'
+import { useRouter } from "next/router";
 
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
 
 const Navbar = (props) => {
+    const router = useRouter();
   return (
     <>
+    
       <header className="navbar-container">
         <header data-thq="thq-navbar" className="navbar-navbar-interactive">
           <img
@@ -21,15 +24,22 @@ const Navbar = (props) => {
               <span className="thq-body-small thq-link">{props.link4}</span>
             </nav>
             <div className="navbar-buttons1">
-              <button className="navbar-action11 thq-button-filled thq-button-animated">
+              <button
+                className="navbar-action11 thq-button-filled thq-button-animated"
+                onClick={() => router.push('/login')}
+              >
                 <span className="thq-body-small">
                   <span>Login</span>
-                  <br></br>
+                  <br />
                 </span>
               </button>
-              <button className="navbar-action21 thq-button-animated thq-button-outline">
+              <button
+                className="navbar-action21 thq-button-animated thq-button-outline"
+                onClick={() => router.push('/signup')}
+              >
                 <span className="thq-body-small">Signup</span>
               </button>
+
             </div>
           </div>
           <div data-thq="thq-burger-menu" className="navbar-burger-menu">
@@ -60,8 +70,19 @@ const Navbar = (props) => {
               </nav>
             </div>
             <div className="navbar-buttons2">
-              <button className="thq-button-filled">Login</button>
-              <button className="thq-button-outline">Register</button>
+              <button
+                className="thq-button-filled"
+                onClick={() => router.push('/login')}
+              >
+                Login
+              </button>
+              <button
+                className="thq-button-outline"
+                onClick={() => router.push('/signup')}
+              >
+                Register
+              </button>
+
             </div>
           </div>
         </header>

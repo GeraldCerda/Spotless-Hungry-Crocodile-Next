@@ -1,7 +1,9 @@
-import './style.css'
+import React from 'react';
+import './style.css';
 
-import { GlobalProvider } from '../global-context'
-import { NextIntlProvider } from 'next-intl'
+import { GlobalProvider } from '../global-context';
+import { NextIntlProvider } from 'next-intl';
+
 export default function MyApp({ Component, pageProps }) {
   return (
     <NextIntlProvider messages={pageProps?.messages}>
@@ -9,5 +11,5 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </GlobalProvider>
     </NextIntlProvider>
-  )
+  );
 }
