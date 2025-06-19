@@ -94,22 +94,33 @@ const Hero = (props) => {
             </div>
           </div>
         </div>
-        <div className="hero-container2">
-          <Script
-            html={`<style>
+        <div>
+          <div className="hero-container2">
+            <Script
+              html={`<style>
   @keyframes scroll-x {
-    from { transform: translateX(0);}
-    to { transform: translateX(calc(-100% - 16px));}
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 16px));
+    }
   }
+
   @keyframes scroll-y {
-    from { transform: translateY(0);}
-    to { transform: translateY(calc(-100% - 16px));}
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - 16px));
+    }
   }
-</style>`}
-          />
+</style>
+`}
+            ></Script>
+          </div>
         </div>
       </div>
-
       <style jsx>
         {`
           .hero-header78 {
